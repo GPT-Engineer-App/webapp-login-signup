@@ -68,7 +68,6 @@ const Index = ({ onToggleSidebar }) => {
 
   return (
     <Container maxW="lg" py={8}>
-      <Button onClick={onToggleSidebar}>Toggle Sidebar</Button>
       <Flex justifyContent="center">
         <Image borderRadius="full" boxSize="150px" src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MDcxMzJ8MHwxfHNlYXJjaHwxfHx1c2VyJTIwcHJvZmlsZSUyMHBsYWNlaG9sZGVyfGVufDB8fHx8MTcxMzUyNDMxMHww&ixlib=rb-4.0.3&q=80&w=1080" alt="Profile Picture" />
       </Flex>
