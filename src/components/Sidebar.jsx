@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Button, Drawer, DrawerBody, DrawerCloseButton, DrawerContent, DrawerHeader, DrawerOverlay, Image, Text, VStack } from "@chakra-ui/react";
-import { FaCopy, FaDoorOpen } from "react-icons/fa";
+import { FaCopy, FaDoorOpen, FaArrowRight } from "react-icons/fa";
 
 const Sidebar = ({ isOpen, onClose }) => {
   return (
@@ -19,14 +19,14 @@ const Sidebar = ({ isOpen, onClose }) => {
             <Button leftIcon={<FaCopy />}>Copy Referral Code</Button>
             <Text>Credit Score: Placeholder</Text>
             <Text>Languages: DE, FR, IT, SE, EN</Text>
-            <Button>Deposit</Button>
-            <Button>Withdraw</Button>
-            <Button>Personal Information</Button>
-            <Button>All Records</Button>
-            <Button>Bind USDT Wallet Address</Button>
-            <Button>Contact</Button>
-            <Button>Terms and Conditions</Button>
-            <Button>Latest Events</Button>
+            <Button leftIcon={<FaArrowRight />}>Deposit</Button>
+            <Button leftIcon={<FaArrowRight />}>Withdraw</Button>
+            <Button leftIcon={<FaArrowRight />}>Personal Information</Button>
+            <Button leftIcon={<FaArrowRight />}>All Records</Button>
+            <Button leftIcon={<FaArrowRight />}>Bind USDT Wallet Address</Button>
+            <Button leftIcon={<FaArrowRight />}>Contact</Button>
+            <Button leftIcon={<FaArrowRight />}>Terms and Conditions</Button>
+            <Button leftIcon={<FaArrowRight />}>Latest Events</Button>
             <Button leftIcon={<FaDoorOpen />}>Log Out</Button>
           </VStack>
         </DrawerBody>

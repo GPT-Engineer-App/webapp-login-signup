@@ -1,17 +1,32 @@
-import React from "react";
-import { Box, Button, Image, Text } from "@chakra-ui/react";
-import { FaDoorOpen } from "react-icons/fa";
-import { FaArrowRight } from "react-icons/fa";
-import { FaHome } from "react-icons/fa";
-import { FaStar } from "react-icons/fa";
-import { FaHistory } from "react-icons/fa";
-import { FaPhone } from "react-icons/fa";
+import React, { useState } from "react";
+import { Box, Button, Image, Text, VStack } from "@chakra-ui/react";
+import { FaBars, FaDoorOpen } from "react-icons/fa";
+import Sidebar from "../components/Sidebar";
 
 function Dashboard() {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen);
+
   return (
     <Box>
-      {}
-      <Text>Welcome to the Dashboard</Text>
+      <Button leftIcon={<FaBars />} position="absolute" top="1rem" left="1rem" onClick={toggleSidebar}>
+        Menu
+      </Button>
+      <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
+      <VStack spacing={4} align="center" mt="4rem">
+        <Text fontSize="2xl">Welcome to the Dashboard</Text>
+        <Box p="4" borderWidth="1px" borderRadius="lg">
+          <Text>Membership Information: Placeholder</Text>
+          <Image src="https://via.placeholder.com/150" alt="Membership Level" />
+          <Text>Bronze</Text>
+        </Box>
+        <Box p="4" borderWidth="1px" borderRadius="lg">
+          <Text>Today's Earnings: Placeholder</Text>
+        </Box>
+        <Button leftIcon={<FaDoorOpen />} colorScheme="red">
+          Log Out
+        </Button>
+      </VStack>
     </Box>
   );
 }
