@@ -8,9 +8,7 @@ function App() {
 
   return (
     <Router>
-      <Routes>
-        <Route exact path="/" element={<Index onToggleSidebar={toggleSidebar} />} />
-      </Routes>
+      <Routes></Routes>
     </Router>
   );
 }
